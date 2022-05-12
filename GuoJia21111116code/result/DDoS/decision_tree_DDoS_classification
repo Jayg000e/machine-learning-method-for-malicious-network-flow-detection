@@ -1,0 +1,17 @@
+digraph Tree {
+node [shape=box, style="filled", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="Flow IAT Min <= 1.5\ngini = 0.667\nsamples = 3600\nvalue = [1200, 1200, 1200]\nclass = benign", fillcolor="#ffffff"] ;
+1 [label="gini = 0.0\nsamples = 1200\nvalue = [0, 0, 1200]\nclass = DDoS_LOIC", fillcolor="#8139e5"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Subflow Fwd Pkts <= 4.0\ngini = 0.5\nsamples = 2400\nvalue = [1200, 1200, 0]\nclass = benign", fillcolor="#ffffff"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label="Flow IAT Mean <= 73298.5\ngini = 0.002\nsamples = 1201\nvalue = [1, 1200, 0]\nclass = DDoS_HOIC", fillcolor="#39e581"] ;
+2 -> 3 ;
+4 [label="gini = 0.0\nsamples = 1200\nvalue = [0, 1200, 0]\nclass = DDoS_HOIC", fillcolor="#39e581"] ;
+3 -> 4 ;
+5 [label="gini = 0.0\nsamples = 1\nvalue = [1, 0, 0]\nclass = benign", fillcolor="#e58139"] ;
+3 -> 5 ;
+6 [label="gini = 0.0\nsamples = 1199\nvalue = [1199, 0, 0]\nclass = benign", fillcolor="#e58139"] ;
+2 -> 6 ;
+}

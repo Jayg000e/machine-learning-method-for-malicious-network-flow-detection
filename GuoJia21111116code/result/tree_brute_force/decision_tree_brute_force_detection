@@ -1,0 +1,13 @@
+digraph Tree {
+node [shape=box, style="filled", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="Fwd Seg Size Min <= 30.0\ngini = 0.5\nsamples = 12000\nvalue = [6000, 6000]\nclass = normal", fillcolor="#ffffff"] ;
+1 [label="gini = 0.0\nsamples = 3982\nvalue = [5973, 0]\nclass = normal", fillcolor="#e58139"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Fwd Pkts/s <= 36.83\ngini = 0.009\nsamples = 8018\nvalue = [27, 6000]\nclass = brute_force_attack", fillcolor="#3a9de5"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label="gini = 0.0\nsamples = 13\nvalue = [19.5, 0.0]\nclass = normal", fillcolor="#e58139"] ;
+2 -> 3 ;
+4 [label="gini = 0.002\nsamples = 8005\nvalue = [7.5, 6000.0]\nclass = brute_force_attack", fillcolor="#399de5"] ;
+2 -> 4 ;
+}

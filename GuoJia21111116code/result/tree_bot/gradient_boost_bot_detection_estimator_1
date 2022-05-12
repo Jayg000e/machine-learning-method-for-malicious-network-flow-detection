@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="Pkts_bandwidth <= 135.281\nfriedman_mse = 0.056\nsamples = 20450\nvalue = 0.042", fillcolor="#f8decb"] ;
+1 [label="Dur <= 123.229\nfriedman_mse = 0.04\nsamples = 18412\nvalue = 0.025", fillcolor="#f8dfcc"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="TotBytes <= 1080.5\nfriedman_mse = 0.032\nsamples = 17499\nvalue = 0.02", fillcolor="#f8dfcd"] ;
+1 -> 2 ;
+3 [label="friedman_mse = 0.022\nsamples = 15694\nvalue = 0.575", fillcolor="#f3c6a6"] ;
+2 -> 3 ;
+4 [label="friedman_mse = 0.114\nsamples = 1805\nvalue = -0.696", fillcolor="#ffffff"] ;
+2 -> 4 ;
+5 [label="udp <= 0.5\nfriedman_mse = 0.175\nsamples = 913\nvalue = 0.133", fillcolor="#f7dac5"] ;
+1 -> 5 ;
+6 [label="friedman_mse = 0.128\nsamples = 469\nvalue = 1.469", fillcolor="#eb9e67"] ;
+5 -> 6 ;
+7 [label="friedman_mse = 0.179\nsamples = 444\nvalue = -0.137", fillcolor="#fae6d8"] ;
+5 -> 7 ;
+8 [label="SrcBytes <= 73.5\nfriedman_mse = 0.177\nsamples = 2038\nvalue = 0.198", fillcolor="#f7d7c0"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="SrcBytes <= 66.5\nfriedman_mse = 0.162\nsamples = 664\nvalue = 0.357", fillcolor="#f5d0b5"] ;
+8 -> 9 ;
+10 [label="friedman_mse = 0.152\nsamples = 125\nvalue = -0.608", fillcolor="#fefbf9"] ;
+9 -> 10 ;
+11 [label="friedman_mse = 0.102\nsamples = 539\nvalue = 2.119", fillcolor="#e58139"] ;
+9 -> 11 ;
+12 [label="TotBytes <= 216.5\nfriedman_mse = 0.166\nsamples = 1374\nvalue = 0.121", fillcolor="#f7dac6"] ;
+8 -> 12 ;
+13 [label="friedman_mse = 0.054\nsamples = 588\nvalue = 0.241", fillcolor="#f6d5bd"] ;
+12 -> 13 ;
+14 [label="friedman_mse = 0.234\nsamples = 786\nvalue = 1.45", fillcolor="#eb9f68"] ;
+12 -> 14 ;
+}

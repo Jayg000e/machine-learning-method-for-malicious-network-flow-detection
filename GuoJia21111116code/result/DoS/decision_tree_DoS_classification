@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, style="filled", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="Fwd Seg Size Min <= 30.0\ngini = 0.667\nsamples = 12000\nvalue = [4000, 4000, 4000]\nclass = benign", fillcolor="#ffffff"] ;
+1 [label="FIN Flag Cnt <= 0.5\ngini = 0.02\nsamples = 3981\nvalue = [3941, 0, 40]\nclass = benign", fillcolor="#e5823b"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="gini = 0.0\nsamples = 3912\nvalue = [3912, 0, 0]\nclass = benign", fillcolor="#e58139"] ;
+1 -> 2 ;
+3 [label="Fwd IAT Min <= 1.5\ngini = 0.487\nsamples = 69\nvalue = [29, 0, 40]\nclass = DoS_slowloris", fillcolor="#dcc9f8"] ;
+1 -> 3 ;
+4 [label="gini = 0.087\nsamples = 22\nvalue = [21, 0, 1]\nclass = benign", fillcolor="#e68742"] ;
+3 -> 4 ;
+5 [label="gini = 0.282\nsamples = 47\nvalue = [8, 0, 39]\nclass = DoS_slowloris", fillcolor="#9b62ea"] ;
+3 -> 5 ;
+6 [label="Bwd IAT Mean <= 21945202.0\ngini = 0.507\nsamples = 8019\nvalue = [59, 4000, 3960]\nclass = DoS_goldeneye", fillcolor="#fdfffe"] ;
+0 -> 6 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+7 [label="Fwd Seg Size Min <= 36.0\ngini = 0.377\nsamples = 5301\nvalue = [59, 3994, 1248]\nclass = DoS_goldeneye", fillcolor="#79edaa"] ;
+6 -> 7 ;
+8 [label="gini = 0.186\nsamples = 4456\nvalue = [10, 3994, 452]\nclass = DoS_goldeneye", fillcolor="#50e890"] ;
+7 -> 8 ;
+9 [label="gini = 0.109\nsamples = 845\nvalue = [49, 0, 796]\nclass = DoS_slowloris", fillcolor="#8945e7"] ;
+7 -> 9 ;
+10 [label="Pkt Len Std <= 159.603\ngini = 0.004\nsamples = 2718\nvalue = [0, 6, 2712]\nclass = DoS_slowloris", fillcolor="#8139e5"] ;
+6 -> 10 ;
+11 [label="gini = 0.0\nsamples = 2712\nvalue = [0, 0, 2712]\nclass = DoS_slowloris", fillcolor="#8139e5"] ;
+10 -> 11 ;
+12 [label="gini = 0.0\nsamples = 6\nvalue = [0, 6, 0]\nclass = DoS_goldeneye", fillcolor="#39e581"] ;
+10 -> 12 ;
+}

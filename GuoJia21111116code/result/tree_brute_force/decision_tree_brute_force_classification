@@ -1,0 +1,17 @@
+digraph Tree {
+node [shape=box, style="filled", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="Fwd Seg Size Min <= 36.0\ngini = 0.667\nsamples = 12000\nvalue = [4000, 4000, 4000]\nclass = benign", fillcolor="#ffffff"] ;
+1 [label="Fwd Seg Size Min <= 30.0\ngini = 0.5\nsamples = 7993\nvalue = [3994, 0, 3999]\nclass = ssh_brute_force", fillcolor="#ffffff"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="gini = 0.0\nsamples = 3982\nvalue = [3982, 0, 0]\nclass = benign", fillcolor="#e58139"] ;
+1 -> 2 ;
+3 [label="gini = 0.006\nsamples = 4011\nvalue = [12, 0, 3999]\nclass = ssh_brute_force", fillcolor="#813ae5"] ;
+1 -> 3 ;
+4 [label="Fwd IAT Min <= 499677.0\ngini = 0.003\nsamples = 4007\nvalue = [6, 4000, 1]\nclass = ftp_brute_force", fillcolor="#39e581"] ;
+0 -> 4 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+5 [label="gini = 0.0\nsamples = 4001\nvalue = [0, 4000, 1]\nclass = ftp_brute_force", fillcolor="#39e581"] ;
+4 -> 5 ;
+6 [label="gini = 0.0\nsamples = 6\nvalue = [6, 0, 0]\nclass = benign", fillcolor="#e58139"] ;
+4 -> 6 ;
+}
