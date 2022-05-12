@@ -1,0 +1,2 @@
+Accuracy of _detection is 98.8966290619803
+ AUC of _detection is 98.8966290619803

@@ -1,0 +1,25 @@
+digraph Tree {
+node [shape=box, style="filled", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="Fwd Seg Size Min <= 30.0\ngini = 0.5\nsamples = 12000\nvalue = [6000, 6000]\nclass = normal", fillcolor="#ffffff"] ;
+1 [label="FIN Flag Cnt <= 0.5\ngini = 0.01\nsamples = 3981\nvalue = [5911.5, 30.0]\nclass = normal", fillcolor="#e5823a"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="gini = 0.0\nsamples = 3912\nvalue = [5868, 0]\nclass = normal", fillcolor="#e58139"] ;
+1 -> 2 ;
+3 [label="Fwd IAT Min <= 1.5\ngini = 0.483\nsamples = 69\nvalue = [43.5, 30.0]\nclass = normal", fillcolor="#f7d8c2"] ;
+1 -> 3 ;
+4 [label="gini = 0.045\nsamples = 22\nvalue = [31.5, 0.75]\nclass = normal", fillcolor="#e6843e"] ;
+3 -> 4 ;
+5 [label="gini = 0.413\nsamples = 47\nvalue = [12.0, 29.25]\nclass = DoS", fillcolor="#8ac5f0"] ;
+3 -> 5 ;
+6 [label="Down/Up Ratio <= 2.5\ngini = 0.029\nsamples = 8019\nvalue = [88.5, 5970.0]\nclass = DoS", fillcolor="#3c9ee5"] ;
+0 -> 6 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+7 [label="Flow Duration <= 1003760.0\ngini = 0.026\nsamples = 8013\nvalue = [79.5, 5970.0]\nclass = DoS", fillcolor="#3c9ee5"] ;
+6 -> 7 ;
+8 [label="gini = 0.213\nsamples = 743\nvalue = [72.0, 521.25]\nclass = DoS", fillcolor="#54abe9"] ;
+7 -> 8 ;
+9 [label="gini = 0.003\nsamples = 7270\nvalue = [7.5, 5448.75]\nclass = DoS", fillcolor="#399de5"] ;
+7 -> 9 ;
+10 [label="gini = 0.0\nsamples = 6\nvalue = [9, 0]\nclass = normal", fillcolor="#e58139"] ;
+6 -> 10 ;
+}
