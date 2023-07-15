@@ -1,9 +1,11 @@
 # Classification of Encrypted Malicious Traffic
 
-## Before performing the following operations, first enter the src folder
+
 
 ## View Results
 If you only want to see the experimental results, please directly view the result folder
+
+## Before performing the following operations, first enter the src folder
 
 ## Download Dataset
 1.Download the required dataset from the address specified in the TechReport, then change the value of the data_dir variable in tree_bot.py and logistic.py to the corresponding address of the CTU-13 folder you downloaded.
