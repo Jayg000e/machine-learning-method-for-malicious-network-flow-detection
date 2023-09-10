@@ -20,7 +20,7 @@ Install conda and run the following command
 If you are prompted that there are missing packages during subsequent runs, use pip to install them
 
 ## Run
-1. Please run the code for each model separately as follows. If you need to perform attack classification, set the attack_classification variable in the corresponding code to True. If you only need to perform identification, set it to False” in English. This means that you can run the code for each model separately and adjust the attack_classification variable depending on whether you want to perform attack classification or not.
+1. Please run the code for each model separately as follows. If you need to perform attack classification, set the attack_classification variable in the corresponding code to True. If you only need to perform identification, set it to False. This means that you can run the code for each model separately and adjust the attack_classification variable depending on whether you want to perform attack classification or not.
 
 2. In addition, setting GradientBoost=True in tree_bot.py allows you to use gradient boosting trees. At this time, it is recommended to set the attack_classification variable to True, otherwise it will take a long time to train, and the report does not recommend using gradient boosting trees for multi-classification
     
